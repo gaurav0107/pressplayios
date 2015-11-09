@@ -4,7 +4,7 @@
 # use_frameworks!
 
 target 'pressplay' do
-
+pod "AFNetworking", "~> 2.0"
 end
 
 target 'pressplayTests' do

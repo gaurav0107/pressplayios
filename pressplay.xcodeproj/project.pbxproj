@@ -13,6 +13,7 @@
 		75BD82321BF09A24001594CD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75BD82311BF09A24001594CD /* Images.xcassets */; };
 		75BD82351BF09A24001594CD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75BD82331BF09A24001594CD /* LaunchScreen.xib */; };
 		75BD82411BF09A24001594CD /* pressplayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BD82401BF09A24001594CD /* pressplayTests.swift */; };
+		819283993818DC2622BA2A06 /* libPods-pressplay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 058D69E05BE5211CBD84BF17 /* libPods-pressplay.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		058D69E05BE5211CBD84BF17 /* libPods-pressplay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pressplay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B489AB463485D016D714234 /* Pods-pressplay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pressplay.release.xcconfig"; path = "Pods/Target Support Files/Pods-pressplay/Pods-pressplay.release.xcconfig"; sourceTree = "<group>"; };
 		75BD82251BF09A24001594CD /* pressplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pressplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75BD82291BF09A24001594CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75BD822A1BF09A24001594CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +39,7 @@
 		75BD823A1BF09A24001594CD /* pressplayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pressplayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75BD823F1BF09A24001594CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75BD82401BF09A24001594CD /* pressplayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pressplayTests.swift; sourceTree = "<group>"; };
+		81607DF2D32E8E025EC87537 /* Pods-pressplay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pressplay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pressplay/Pods-pressplay.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				819283993818DC2622BA2A06 /* libPods-pressplay.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +61,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		378D837332FBDE6F4226BB3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				058D69E05BE5211CBD84BF17 /* libPods-pressplay.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		75BD821C1BF09A24001594CD = {
 			isa = PBXGroup;
 			children = (
 				75BD82271BF09A24001594CD /* pressplay */,
 				75BD823D1BF09A24001594CD /* pressplayTests */,
 				75BD82261BF09A24001594CD /* Products */,
+				97203CFFC2318D97C014D209 /* Pods */,
+				378D837332FBDE6F4226BB3A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +127,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		97203CFFC2318D97C014D209 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81607DF2D32E8E025EC87537 /* Pods-pressplay.debug.xcconfig */,
+				6B489AB463485D016D714234 /* Pods-pressplay.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +143,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75BD82441BF09A24001594CD /* Build configuration list for PBXNativeTarget "pressplay" */;
 			buildPhases = (
+				038F1DAA72ACACA0D16F9D31 /* Check Pods Manifest.lock */,
 				75BD82211BF09A24001594CD /* Sources */,
 				75BD82221BF09A24001594CD /* Frameworks */,
 				75BD82231BF09A24001594CD /* Resources */,
+				9DDD4E6AE184DA0BC56E4705 /* Embed Pods Frameworks */,
+				5D8DE003CC847FB52DD8F0B3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,6 +233,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		038F1DAA72ACACA0D16F9D31 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5D8DE003CC847FB52DD8F0B3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pressplay/Pods-pressplay-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DDD4E6AE184DA0BC56E4705 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pressplay/Pods-pressplay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		75BD82211BF09A24001594CD /* Sources */ = {
@@ -340,6 +415,7 @@
 		};
 		75BD82451BF09A24001594CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81607DF2D32E8E025EC87537 /* Pods-pressplay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -351,6 +427,7 @@
 		};
 		75BD82461BF09A24001594CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B489AB463485D016D714234 /* Pods-pressplay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -413,6 +490,7 @@
 				75BD82461BF09A24001594CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		75BD82471BF09A24001594CD /* Build configuration list for PBXNativeTarget "pressplayTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +499,7 @@
 				75BD82491BF09A24001594CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
